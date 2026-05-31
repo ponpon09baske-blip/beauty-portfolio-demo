@@ -67,7 +67,7 @@ document.querySelectorAll('.tab').forEach(tab => {
         void item.offsetWidth;
         item.style.animationDelay = `${delay}ms`;
         item.classList.add('filter-appear');
-        delay += 50;
+        delay += 0;
       } else {
         item.classList.add('hidden');
       }
