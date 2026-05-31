@@ -44,6 +44,16 @@ nav {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 2px; background: var(--border);
+  position: relative;
+}
+.hero-right-label {
+  position: absolute;
+  top: 16px; left: 20px;
+  font-size: 13px; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: rgba(255,255,255,0.9);
+  text-shadow: 0 1px 6px rgba(0,0,0,0.3);
+  pointer-events: none; z-index: 2;
 }
 .hero-cell {
   background: var(--surface);
