@@ -215,6 +215,7 @@ body:has(.gallery-cell:hover) .cursor-ring { width: 64px; height: 64px; }
 
 nav { transition: padding 0.4s, background 0.4s; }
 nav.scrolled { padding: 16px 60px; }
+@media (max-width: 768px) { nav.scrolled { padding: 12px 24px; } }
 
 .hero-bg { will-change: transform; }
 

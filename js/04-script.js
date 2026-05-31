@@ -57,10 +57,20 @@ document.querySelectorAll('.tab').forEach(tab => {
     document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
     tab.classList.add('active');
     const filter = tab.textContent.toLowerCase();
+    let delay = 0;
     document.querySelectorAll('.work-item').forEach(item => {
       const cats = (item.dataset.cat || '').toLowerCase();
       const show = filter === 'all' || cats.includes(filter);
-      item.classList.toggle('hidden', !show);
+      item.classList.remove('filter-appear');
+      if (show) {
+        item.classList.remove('hidden');
+        void item.offsetWidth;
+        item.style.animationDelay = `${delay}ms`;
+        item.classList.add('filter-appear');
+        delay += 50;
+      } else {
+        item.classList.add('hidden');
+      }
     });
   });
 });
