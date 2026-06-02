@@ -300,6 +300,14 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
 @media (max-width: 768px) {
   nav { padding: 0 20px; }
   .nav-links { display: none; }
+  /* 水玉をスマホ用に小さく・非表示 */
+  .hero::after { width: 180px; height: 180px; top: -40px; left: -40px; }
+  .hero-dot2 { width: 120px; height: 120px; bottom: 20px; left: 20%; }
+  .hero-dot3 { display: none; }
+  .hero-dot4 { display: none; }
+  .hero-dot5 { width: 160px; height: 160px; top: 25%; left: 50%; }
+  .about::before { width: 160px; height: 160px; top: -30px; right: 5%; }
+  .about::after { width: 120px; height: 120px; bottom: -20px; left: 30%; }
   .hero { grid-template-columns: 1fr; min-height: auto; }
   .hero-left { padding: 48px 20px; border-right: none; border-bottom: 1px solid var(--border); }
   .hero-right-label {
