@@ -309,6 +309,7 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
   .about::before { width: 160px; height: 160px; top: -30px; right: 5%; }
   .about::after { width: 120px; height: 120px; bottom: -20px; left: 30%; }
   .hero { grid-template-columns: 1fr; height: auto; min-height: auto; }
+  .works { padding: 48px 0; }
   .hero-left { padding: 48px 20px; border-right: none; border-bottom: 1px solid var(--border); }
   .hero-right-label {
     writing-mode: horizontal-tb; rotate: 0deg;

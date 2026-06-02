@@ -14,9 +14,9 @@ function countUp(el, target, suffix, duration) {
 }
 
 const counters = [
-  { sel: '.meta-item:nth-child(1) .n', target: 12,   suffix: '' },
-  { sel: '.meta-item:nth-child(2) .n', target: 2000, suffix: '+' },
-  { sel: '.meta-item:nth-child(3) .n', target: 150,  suffix: '+' },
+  { sel: '.meta-item:nth-child(1) .n', target: 2,  suffix: '' },
+  { sel: '.meta-item:nth-child(2) .n', target: 50, suffix: '+' },
+  { sel: '.meta-item:nth-child(3) .n', target: 4,  suffix: '' },
 ];
 const metaEl = document.querySelector('.hero-meta');
 const metaObserver = new IntersectionObserver(entries => {
@@ -26,7 +26,7 @@ const metaObserver = new IntersectionObserver(entries => {
     if (el) countUp(el, c.target, c.suffix, 1400);
   });
   metaObserver.disconnect();
-}, { threshold: 0.5 });
+}, { threshold: 0.1 });
 if (metaEl) metaObserver.observe(metaEl);
 
 // ── スクロールフェードイン ──
